@@ -33,7 +33,7 @@ final class BottomSheetView: PassThroughView {
   }
   
   // MARK: UI
-  private let bottomSheetView: UIView = {
+  let bottomSheetView: UIView = {
     let view = UIView()
     view.backgroundColor = .lightGray
     return view
