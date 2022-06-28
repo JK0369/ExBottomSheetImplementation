@@ -6,14 +6,22 @@
 //
 
 import UIKit
+import SnapKit
 
 class ViewController: UIViewController {
-
+  private let bottomSheetView: BottomSheetView = {
+    let view = BottomSheetView()
+    view.bottomSheetColor = .lightGray
+    view.barViewColor = .darkGray
+    return view
+  }()
+  
   override func viewDidLoad() {
     super.viewDidLoad()
-    // Do any additional setup after loading the view.
+    
+    self.view.addSubview(self.bottomSheetView)
+    self.bottomSheetView.snp.makeConstraints {
+      $0.edges.equalToSuperview()
+    }
   }
-
-
 }
-
